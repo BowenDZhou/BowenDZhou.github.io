@@ -5,55 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bowen's Portfolio</title>
     <style>
+        /* class styling */
         @font-face {
-            font-family: 'San Francisco';
-            src: url(fonts/SFPro/OpenType/SF-Pro-Display-BlackItalic.otf) format('opentype');
+            font-family: 'San Francisco Heavy';
+            src: url(fonts/SFPro/OpenType/SF-Pro-Display-Heavy.otf) format('opentype');
         }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+        @font-face {
+            font-family: 'San Francisco Light';
+            src: url(fonts/SFPro/OpenType/SF-Pro-Display-Light.otf) format('opentype');
         }
-        header {
-            font-family: 'San Francisco', sans-serif;
-            font-size: larger;
-            background-color: #282c34;
-            color: #61dafb;
-            padding: 50px;
-            text-align: center;
+        .titlespacedword {
+            letter-spacing: 15px;
+            font-size: 48px;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #61dafb;
-        }
-        nav a {
-            color: #282c34;
-            padding: 14px 20px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            background-color: #21a1f1;
+        .subtitlespacedword{
+            letter-spacing: 5px;
         }
         .container {
             padding: 20px;
             max-width: 1200px;
-            margin: auto;
-        }
-        .profile {
-            text-align: center;
-        }
-        .profile img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
+            margin: 50px;;
+            border-radius: 7px;
+            background-color: #69b9fa;
         }
         .section {
             margin: 20px 0;
@@ -74,9 +47,65 @@
             height: auto;
             border-radius: 5px;
         }
+        .iconnav{
+            margin-top: 150px;
+
+        }
+        /* HTML given container styling */
+        header {
+            font-family: 'San Francisco Heavy', sans-serif;
+            font-size: larger;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 50px;
+            text-align: center;
+        }
+        header h5 {
+            margin-top: 2%;
+            margin-bottom: 0px;
+            color: #919191;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+        p {
+            font-family: 'San Francisco Light',sans-serif;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ffffff;
+        }
+        nav a {
+            color: #000000;
+            padding: 14px 50px;
+            text-decoration: none;
+            font-family: 'San Francisco Light', sans-serif;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #69b9fa;
+        }
+        nav b{
+            font-family: 'San Francisco', sans-serif;
+            background-color: #61dafb;
+            margin: 50px;
+            padding: 10px;
+            border-radius: 10px;
+        }
         footer {
-            background-color: #282c34;
-            color: #61dafb;
+            font-family: 'San Francisco Light';
+            background-color:#e4e4e4;
+            color: #1d1d1d;
             text-align: center;
             padding: 10px;
             position: fixed;
@@ -84,24 +113,39 @@
             width: 100%;
         }
     </style>
+
+    
 </head>
 <body>
     <header>
-        <h1>Bowen's Portfolio</h1>
+        <h1 class="titlespacedword">BOWEN ZHOU</h1>
+        <h5 class="subtitlespacedword">ASPIRING INDIE GAME PROGRAMMER</h5>
     </header>
     <nav>
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
+        <a href="#projects">Media</a>
         <a href="#contact">Contact</a>
     </nav>
-    <div class="container">
-        <section id="about" class="section">
-            <div class="profile">
-                <img src="images/load bearing coconut.png" alt="Bowen's Photo">
-                <h2>About Me</h2>
-                <p>Hello! I'm Bowen, a Game Development student at IU with a minor in Japanese. I'm passionate about programming and creating immersive experiences in game development. Currently, I am a programmer for "Decomposition," an analog horror game.</p>
-            </div>
-        </section>
+    <nav class="iconnav">
+        <b>
+            <image src= "images/briefcase.png" style="max-width: 100%; max-height: 100%; "></image>
+            <p>Work</p>
+        </b>
+        <b> <image src= "images/wrench.png" style="max-width: 100%; max-height: 100%;"></image>
+            <p>Projects</p>
+        </b>
+        <b> <image src= "images/love.png" style="max-width: 100%; max-height: 100%;"></image>
+            <p>Passions</p>
+        </b>
+    </nav>
+    <footer>
+        <p>&copy; 2024 Bowen. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+<!--     THIS IS REFERENCE EXAMPLE IF YOU NEED IT
+
+<div class="container">
         <section id="projects" class="section">
             <h2>Projects</h2>
             <div class="project">
@@ -110,15 +154,6 @@
                 <p>Decomposition is an analog horror game that explores eerie and unsettling themes through gameplay. My role involves coding and implementing various gameplay mechanics to enhance the horror experience.</p>
                 <img src="images/Decomp.png" alt="Decomposition Screenshot">
             </div>
-            <!-- Add more projects here -->
+            Add more projects here
         </section>
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>If you'd like to get in touch with me, feel free to email me at <a href="mailto:bowenzhou.bz@gmail.com">bowenzhou.bz@gmail.com</a>.</p>
-        </section>
-    </div>
-    <footer>
-        <p>&copy; 2024 Bowen. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+    </div> -->
